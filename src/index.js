@@ -1,7 +1,7 @@
-import homePage from "./Pages/home.js";
-import menuPage from "./Pages/menu.js";
-import aboutPage from "./Pages/about.js";
-import "./Styles/style.css";
+import homePage from "./pages/home.js";
+import menuPage from "./pages/menu.js";
+import aboutPage from "./pages/about.js";
+import "./styles/style.css";
 
 //setup header
 const $body = document.querySelector("body");

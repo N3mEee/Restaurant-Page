@@ -1,4 +1,4 @@
-import Icon from "../Assets/content.png";
+import Icon from "../assets/content.png";
 
 export default function homePage() {
     const $content = document.querySelector("#content");
