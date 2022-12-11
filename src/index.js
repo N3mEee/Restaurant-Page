@@ -7,8 +7,18 @@ import "./styles/style.css";
 const $body = document.querySelector("body");
 const $content = document.querySelector("#content");
 const $header = document.createElement("div");
-$header.setAttribute("class", "header");
+$header.classList.add("header");
 $body.insertBefore($header, $content);
+
+//logo
+const $logo = document.createElement("div");
+$logo.innerText = "Restaurant Page";
+$header.appendChild($logo);
+
+//navigation
+const $nav = document.createElement("div");
+$nav.classList.add("nav");
+$header.appendChild($nav);
 
 //home page button
 const $homeBtn = document.createElement("button");
@@ -18,7 +28,7 @@ $homeBtn.addEventListener("click", (e) => {
     removeContent();
     homePage();
 });
-$header.appendChild($homeBtn);
+$nav.appendChild($homeBtn);
 
 //menu page button
 const $menu = document.createElement("button");
@@ -27,7 +37,7 @@ $menu.addEventListener("click", (e) => {
     removeContent();
     menuPage();
 });
-$header.appendChild($menu);
+$nav.appendChild($menu);
 
 //about page button
 const $about = document.createElement("button");
@@ -36,7 +46,7 @@ $about.addEventListener("click", (e) => {
     removeContent();
     aboutPage();
 });
-$header.appendChild($about);
+$nav.appendChild($about);
 
 //remove all children from $content
 const removeContent = () => {
