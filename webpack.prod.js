@@ -1,11 +1,12 @@
 const path = require("path");
-
+const htmlWebpackPlugin = require("html-webpack-plugin");
 module.exports = {
+    mode: "production",
     entry: "./src/index.js",
-    // mode: 'development',
     output: {
         filename: "main.js",
         path: path.resolve(__dirname, "dist"),
+        clean: true,
     },
     module: {
         rules: [
@@ -19,4 +20,11 @@ module.exports = {
             },
         ],
     },
+    plugins: [
+        new htmlWebpackPlugin({
+            title: "Restaurant Page",
+            filename: "index.html",
+            template: "src/template.html",
+        }),
+    ],
 };

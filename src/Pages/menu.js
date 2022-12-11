@@ -1,6 +1,6 @@
-import Icon from "./content.png";
+import Icon from "../Assets/content.png";
 
-export default function homePage() {
+export default function menuPage() {
     const $content = document.querySelector("#content");
 
     const $info = document.createElement("div");
@@ -18,7 +18,7 @@ export default function homePage() {
     $info.appendChild($form);
 
     const $label = document.createElement("label");
-    $label.innerText = "Your Address";
+    $label.innerText = "Your MENU Address";
     $label.setAttribute("for", "address");
     $form.appendChild($label);
 
