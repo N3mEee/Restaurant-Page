@@ -4,27 +4,31 @@
     justify-content: center;
     align-items: flex-start;
 }
+
 .info-content {
     margin-left: 20%;
     display: flex;
     flex-direction: column;
 }
+
 .info-home p:first-child {
+    font-family: "ClintonExtraBold", "Helvetica Neue", Helvetica, Arial, sans-serif;
     font-weight: 900;
     font-size: 3rem;
     color: #242e30;
-    z-index: 1;
     margin: 0;
     align-self: flex-start;
+    z-index: 1;
 }
 
 .info-home p:last-of-type {
+    font-family: "ClintonBold", "Helvetica Neue", Helvetica, Arial, sans-serif;
     font-weight: 700;
     font-size: 2rem;
-    z-index: 1;
     color: #242e30;
     align-self: flex-start;
     margin: 10px 0 40px 0;
+    z-index: 1;
 }
 
 .info-home form {
@@ -52,11 +56,25 @@
     font-size: 1.2rem;
     font-weight: bolder;
     padding: 10px 20px;
-    right: 1%;
+    right: 0.5%;
     top: 7%;
 }
 
 .info-home form button:hover {
     background-color: #f06c00;
     cursor: pointer;
+}
+
+@media only screen and (max-width: 1500px) {
+    .info-content {
+        margin-left: 0;
+    }
+
+    .info-home {
+        align-items: center;
+    }
+
+    .info-home form {
+        width: 100%;
+    }
 }
