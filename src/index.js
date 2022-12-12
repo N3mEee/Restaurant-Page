@@ -12,7 +12,12 @@ $body.insertBefore($header, $content);
 
 //logo
 const $logo = document.createElement("div");
+$logo.classList.add("logo");
 $logo.innerText = "Restaurant Page";
+$logo.addEventListener("click", (e) => {
+    removeContent();
+    homePage();
+});
 $header.appendChild($logo);
 
 //navigation
