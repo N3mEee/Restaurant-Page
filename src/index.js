@@ -1,6 +1,9 @@
 import homePage from "./pages/home.js";
 import menuPage from "./pages/menu.js";
 import aboutPage from "./pages/about.js";
+import bread from "./assets/bx-baguette.svg";
+import bowl from "./assets/bx-bowl-hot.svg";
+import rice from "./assets/bx-bowl-rice.svg";
 import "./styles/style.css";
 
 //setup header
@@ -30,34 +33,60 @@ const $ul = document.createElement("ul");
 $nav.appendChild($ul);
 
 //home page button
-const $homeBtn = document.createElement("li");
-$homeBtn.innerText = "Home";
-homePage();
-$homeBtn.addEventListener("click", (e) => {
+const $homeLi = document.createElement("li");
+const $home = document.createElement("div");
+const $bread = new Image();
+
+$home.innerText = `Home`;
+$bread.src = bread;
+
+$homeLi.appendChild($bread);
+$homeLi.appendChild($home);
+
+$homeLi.addEventListener("click", (e) => {
     removeContent();
     homePage();
 });
-$ul.appendChild($homeBtn);
+
+$ul.appendChild($homeLi);
 
 //menu page button
-const $menu = document.createElement("li");
+const $menuLi = document.createElement("li");
+const $menu = document.createElement("div");
+const $rice = new Image();
+
 $menu.innerText = "Menu";
-$menu.addEventListener("click", (e) => {
+$rice.src = rice;
+
+$menuLi.appendChild($rice);
+$menuLi.appendChild($menu);
+
+$menuLi.addEventListener("click", (e) => {
     removeContent();
     menuPage();
 });
-$ul.appendChild($menu);
+$ul.appendChild($menuLi);
 
 //about page button
-const $about = document.createElement("li");
+const $aboutLi = document.createElement("li");
+const $about = document.createElement("div");
+const $bowl = new Image();
+
 $about.innerText = "About";
-$about.addEventListener("click", (e) => {
+$bowl.src = bowl;
+
+$aboutLi.appendChild($bowl);
+$aboutLi.appendChild($about);
+
+$aboutLi.addEventListener("click", (e) => {
     removeContent();
     aboutPage();
 });
-$ul.appendChild($about);
+$ul.appendChild($aboutLi);
 
 //remove all children from $content
 const removeContent = () => {
     $content.innerHTML = "";
 };
+
+homePage();
