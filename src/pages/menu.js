@@ -1,10 +1,11 @@
-import Icon from "../assets/content.png";
+import Icon from "../assets/menu.png";
+import "../styles/menu.css";
 
-export default function homePage() {
+export default function menuPage() {
     const $content = document.querySelector("#content");
 
     const $info = document.createElement("div");
-    $info.setAttribute("class", "info");
+    $info.classList.add("info", "info-menu");
 
     const $h1 = document.createElement("h1");
     $h1.innerText = "Time to order food";
@@ -18,7 +19,7 @@ export default function homePage() {
     $info.appendChild($form);
 
     const $label = document.createElement("label");
-    $label.innerText = "Your HOME Address";
+    $label.innerText = "Your MENU Address";
     $label.setAttribute("for", "address");
     $form.appendChild($label);
 
@@ -29,7 +30,7 @@ export default function homePage() {
     $form.appendChild($input);
 
     const $rightImg = document.createElement("div");
-    $rightImg.setAttribute("class", "right-img");
+    $rightImg.classList.add("right-img");
 
     const $img = new Image();
     $img.src = Icon;
