@@ -25,33 +25,37 @@ const $nav = document.createElement("div");
 $nav.classList.add("nav");
 $header.appendChild($nav);
 
+//navigation list
+const $ul = document.createElement("ul");
+$nav.appendChild($ul);
+
 //home page button
-const $homeBtn = document.createElement("button");
+const $homeBtn = document.createElement("li");
 $homeBtn.innerText = "Home";
 homePage();
 $homeBtn.addEventListener("click", (e) => {
     removeContent();
     homePage();
 });
-$nav.appendChild($homeBtn);
+$ul.appendChild($homeBtn);
 
 //menu page button
-const $menu = document.createElement("button");
+const $menu = document.createElement("li");
 $menu.innerText = "Menu";
 $menu.addEventListener("click", (e) => {
     removeContent();
     menuPage();
 });
-$nav.appendChild($menu);
+$ul.appendChild($menu);
 
 //about page button
-const $about = document.createElement("button");
+const $about = document.createElement("li");
 $about.innerText = "About";
 $about.addEventListener("click", (e) => {
     removeContent();
     aboutPage();
 });
-$nav.appendChild($about);
+$ul.appendChild($about);
 
 //remove all children from $content
 const removeContent = () => {
