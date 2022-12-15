@@ -3,9 +3,10 @@ import "../styles/home.css";
 
 export default function homePage() {
     const $content = document.querySelector("#content");
+    $content.classList = "home-page";
 
     const $info = document.createElement("div");
-    $info.classList.add("info", "info-home");
+    $info.classList.add("info");
 
     const $infoContent = document.createElement("div");
     $infoContent.classList.add("info-content");

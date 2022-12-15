@@ -1,17 +1,38 @@
-.info-home {
+.home-page {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    height: calc(100vh - 75px);
+}
+
+.home-page .info {
+    height: 100%;
+    width: 100%;
+    position: relative;
+    background-color: #f0f0f0;
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: flex-start;
 }
 
-.info-content {
+.home-page .info::after {
+    position: absolute;
+    content: "";
+    height: 100%;
+    width: 10em;
+    right: 0;
+    background-color: #f0f0f0;
+    transform-origin: bottom right;
+    transform: skewX(-10deg);
+}
+
+.home-page .info-content {
     margin-left: 20%;
     display: flex;
     flex-direction: column;
 }
 
-.info-home p:first-child {
+.home-page .info p:first-child {
     font-family: "ClintonExtraBold", "Helvetica Neue", Helvetica, Arial, sans-serif;
     font-weight: 900;
     font-size: 3rem;
@@ -21,7 +42,7 @@
     z-index: 1;
 }
 
-.info-home p:last-of-type {
+.home-page .info p:last-of-type {
     font-family: "ClintonBold", "Helvetica Neue", Helvetica, Arial, sans-serif;
     font-weight: 700;
     font-size: 2rem;
@@ -31,13 +52,13 @@
     z-index: 1;
 }
 
-.info-home form {
+.home-page .info form {
     width: 120%;
     position: relative;
     z-index: 1;
 }
 
-.info-home form input {
+.home-page .info form input {
     width: 100%;
     height: 3rem;
     border: 1px solid gray;
@@ -47,7 +68,7 @@
     font-size: 1.2rem;
 }
 
-.info-home form button {
+.home-page .info form button {
     background-color: #ff8000;
     position: absolute;
     border: none;
@@ -60,21 +81,47 @@
     top: 7%;
 }
 
-.info-home form button:hover {
+.home-page .info form button:hover {
     background-color: #f06c00;
     cursor: pointer;
 }
 
+.home-page .right-img {
+    height: 100%;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    background-color: #ff8000;
+    align-items: center;
+}
+
+.home-page .right-img img {
+    width: 80%;
+    height: fit-content;
+}
+
 @media only screen and (max-width: 1500px) {
-    .info-content {
+    .home-page .info-content {
         margin-left: 0;
     }
 
-    .info-home {
+    .home-page .info {
         align-items: center;
     }
 
-    .info-home form {
+    .home-page .info form {
         width: 100%;
+    }
+}
+
+@media only screen and (max-width: 1101px) {
+    .home-page {
+        grid-template-columns: 1fr;
+        grid-template-rows: 1fr 1fr;
+        height: calc(100vh - 75px);
+    }
+
+    .info::after {
+        display: none;
     }
 }
