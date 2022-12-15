@@ -1,6 +1,21 @@
-.info-about {
+.about-page {
+    min-height: calc(100vh - 75px);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-family: "ClintonExtraBold", "Helvetica Neue", Helvetica, Arial, sans-serif;
+    color: #242e30;
+}
+
+.about-page .container {
+    width: 55%;
+    height: auto;
     display: flex;
     flex-direction: column;
     justify-content: center;
-    align-items: center;
+    align-items: flex-start;
+}
+
+.about-page .container p {
+    font-family: "ClintonBold", "Helvetica Neue", Helvetica, Arial, sans-serif;
 }
