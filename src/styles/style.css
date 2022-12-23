@@ -39,6 +39,46 @@ body {
     font-family: "ClintonExtraBold", "Helvetica Neue", Helvetica, Arial, sans-serif;
 }
 
+.ham {
+    display: none;
+    font-size: 1.5rem;
+}
+
+.container-nav {
+    width: 50%;
+    padding: 0;
+    height: auto;
+    background-color: whitesmoke;
+    border: 1px solid gray;
+    display: none;
+    position: absolute;
+    top: 50%;
+    left: 25%;
+}
+.container-nav ul {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    list-style: none;
+    margin: 0;
+}
+
+.container-nav li {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-family: "Clinton semibold", "Helvetica Neue", Helvetica, Arial, sans-serif;
+    color: #242e30;
+    cursor: pointer;
+    border-radius: 20px;
+    padding: 15px;
+}
+
+.container-nav li:hover {
+    background-color: rgba(0, 0, 0, 0.05);
+}
+
 .nav ul {
     display: flex;
     list-style: none;
@@ -60,9 +100,13 @@ body {
     background-color: rgba(0, 0, 0, 0.05);
 }
 
-@media only screen and (max-width: 605px) {
-    .nav {
-        /* add burger menu for nav */
+@media only screen and (max-width: 650px) {
+    .nav ul {
         display: none;
     }
+
+    .ham {
+        display: block;
+    }
 }
+
