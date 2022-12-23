@@ -28,6 +28,79 @@ const $nav = document.createElement("div");
 $nav.classList.add("nav");
 $header.appendChild($nav);
 
+//hamburger navigation
+const $ham = document.createElement("div");
+$ham.classList.add("ham");
+$nav.appendChild($ham);
+
+const $icon = document.createElement("i");
+$icon.classList.add("fa", "fa-bars");
+$ham.appendChild($icon);
+$ham.addEventListener("click", (e) => {
+    if ($containerNav.style.display == "none") {
+        $containerNav.style.display = "block";
+    } else {
+        $containerNav.style.display = "none";
+    }
+});
+
+//navigation list mobile
+const $containerNav = document.createElement("ul");
+$containerNav.classList.add("container-nav");
+$header.appendChild($containerNav);
+
+//home page button
+const $mobilehomeLi = document.createElement("li");
+const $mobilehome = document.createElement("div");
+const $mobilebread = new Image();
+
+$mobilehome.innerText = `Home`;
+$mobilebread.src = bread;
+
+$mobilehomeLi.appendChild($mobilebread);
+$mobilehomeLi.appendChild($mobilehome);
+
+$mobilehomeLi.addEventListener("click", (e) => {
+    removeContent();
+    homePage();
+});
+
+$containerNav.appendChild($mobilehomeLi);
+
+//menu page button
+const $mobilemenuLi = document.createElement("li");
+const $mobilemenu = document.createElement("div");
+const $mobilerice = new Image();
+
+$mobilemenu.innerText = "Menu";
+$mobilerice.src = rice;
+
+$mobilemenuLi.appendChild($mobilerice);
+$mobilemenuLi.appendChild($mobilemenu);
+
+$mobilemenuLi.addEventListener("click", (e) => {
+    removeContent();
+    menuPage();
+});
+$containerNav.appendChild($mobilemenuLi);
+
+//about page button
+const $mobileaboutLi = document.createElement("li");
+const $mobileabout = document.createElement("div");
+const $mobilebowl = new Image();
+
+$mobileabout.innerText = "About";
+$mobilebowl.src = bowl;
+
+$mobileaboutLi.appendChild($mobilebowl);
+$mobileaboutLi.appendChild($mobileabout);
+
+$mobileaboutLi.addEventListener("click", (e) => {
+    removeContent();
+    aboutPage();
+});
+$containerNav.appendChild($mobileaboutLi);
+
 //navigation list
 const $ul = document.createElement("ul");
 $nav.appendChild($ul);

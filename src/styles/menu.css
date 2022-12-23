@@ -1,0 +1,44 @@
+.menu-page {
+    min-height: calc(100vh - 75px);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: #242e30;
+    font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+}
+
+.menu-page .container {
+    width: 55%;
+    height: auto;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: stretch;
+    gap: 10px;
+}
+
+.menu-page img {
+    height: 170px;
+}
+
+.menu-page .menu-card {
+    margin: 5px;
+    padding: 20px;
+    border: 1px solid grey;
+    border-radius: 20px;
+    display: grid;
+    grid-template-columns: 9fr 1fr;
+}
+
+.menu-page .card-title {
+    font-family: "ClintonBold", "Helvetica Neue", Helvetica, Arial, sans-serif;
+    font-size: 1.5rem;
+    font-weight: 900;
+}
+
+.menu-page .card-price {
+    font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+    font-size: 1.5rem;
+    font-weight: 900;
+    margin: 0;
+}
