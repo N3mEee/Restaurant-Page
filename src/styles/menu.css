@@ -8,6 +8,7 @@
 }
 
 .menu-page .container {
+    margin: 10px, 0 10px 0;
     width: 55%;
     height: auto;
     display: flex;
@@ -41,4 +42,20 @@
     font-size: 1.5rem;
     font-weight: 900;
     margin: 0;
+}
+
+@media only screen and (max-width: 680px) {
+    .menu-page .menu-card {
+        margin: 5px;
+        padding: 20px;
+        border: 1px solid grey;
+        border-radius: 20px;
+        display: grid;
+        grid-template-columns: 1fr;
+        justify-items: center;
+    }
+
+    .menu-page .container {
+        width: 100%;
+    }
 }
