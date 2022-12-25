@@ -19,3 +19,14 @@
 .about-page .container p {
     font-family: "ClintonBold", "Helvetica Neue", Helvetica, Arial, sans-serif;
 }
+
+@media only screen and (max-width: 680px) {
+    .about-page .container {
+        width: 80%;
+        height: auto;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: flex-start;
+    }
+}

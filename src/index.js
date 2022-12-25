@@ -37,13 +37,17 @@ const $icon = document.createElement("i");
 $icon.classList.add("fa", "fa-bars");
 $ham.appendChild($icon);
 $ham.addEventListener("click", (e) => {
-    if ($containerNav.style.display == "none") {
-        $containerNav.style.display = "block";
-    } else {
-        $containerNav.style.display = "none";
-    }
+    toggleNavListMobile();
 });
 
+//toggle navigation list mobile
+function toggleNavListMobile() {
+    if ($containerNav.style.display === "block") {
+        $containerNav.style.display = "none";
+    } else {
+        $containerNav.style.display = "block";
+    }
+}
 //navigation list mobile
 const $containerNav = document.createElement("ul");
 $containerNav.classList.add("container-nav");
@@ -63,6 +67,7 @@ $mobilehomeLi.appendChild($mobilehome);
 $mobilehomeLi.addEventListener("click", (e) => {
     removeContent();
     homePage();
+    toggleNavListMobile();
 });
 
 $containerNav.appendChild($mobilehomeLi);
@@ -81,6 +86,7 @@ $mobilemenuLi.appendChild($mobilemenu);
 $mobilemenuLi.addEventListener("click", (e) => {
     removeContent();
     menuPage();
+    toggleNavListMobile();
 });
 $containerNav.appendChild($mobilemenuLi);
 
@@ -98,6 +104,7 @@ $mobileaboutLi.appendChild($mobileabout);
 $mobileaboutLi.addEventListener("click", (e) => {
     removeContent();
     aboutPage();
+    toggleNavListMobile();
 });
 $containerNav.appendChild($mobileaboutLi);
 
