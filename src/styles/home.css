@@ -87,17 +87,10 @@
 }
 
 .home-page .right-img {
-    height: 100%;
-    width: 100%;
     display: flex;
     justify-content: center;
     background-color: #ff8000;
     align-items: center;
-}
-
-.home-page .right-img img {
-    width: 80%;
-    height: fit-content;
 }
 
 @media only screen and (max-width: 1500px) {

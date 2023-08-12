@@ -1,4 +1,9 @@
+import Icon256 from "../assets/home 256.png";
+import Icon1120 from "../assets/home 1120.png";
 import Icon from "../assets/home.png";
+import Icon1820 from "../assets/home 1820.png";
+import Icon2048 from "../assets/home 2048.png";
+
 import "../styles/home.css";
 
 export default function homePage() {
@@ -39,6 +44,8 @@ export default function homePage() {
 
     const $img = new Image();
     $img.src = Icon;
+    $img.srcset = `${Icon256} 256w, ${Icon1120} 1120w, ${Icon} 1568w, ${Icon1820} 1820w, ${Icon2048} 2048w`;
+    $img.sizes = `(min-width: 1120px) 40vw, 80vw`;
     $rightImg.appendChild($img);
 
     $info.appendChild($infoContent);
