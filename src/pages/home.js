@@ -45,7 +45,7 @@ export default function homePage() {
     const $img = new Image();
     $img.src = Icon;
     $img.srcset = `${Icon256} 256w, ${Icon1120} 1120w, ${Icon} 1568w, ${Icon1820} 1820w, ${Icon2048} 2048w`;
-    $img.sizes = `(min-width: 1120px) 40vw, 80vw`;
+    $img.sizes = `(max-width: 256px) 50vw, (max-width: 1120) 50vw, (max-width: 1568) 50vw, (max-width: 1820) 50vw, (max-width: 2048) 50vw`;
     $rightImg.appendChild($img);
 
     $info.appendChild($infoContent);
